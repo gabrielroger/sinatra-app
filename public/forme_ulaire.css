@@ -1,0 +1,11 @@
+h1
+{
+	color: red;
+	font-size: 2em;
+	font-family: "Times New Roman";
+	text-shadow: 2px 2px 4px red;
+}
+body
+{
+	background-color: green;
+}

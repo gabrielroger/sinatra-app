@@ -5,10 +5,6 @@ h1
 	font-family: "Times New Roman";
 	text-shadow: 2px 2px 4px red;
 }
-body
-{
-	background-color: green;
-}
 #block_page
 {
     background-image: url("fond2.png");

@@ -1,9 +1,6 @@
 require 'sinatra'
 require 'yaml/store'
 set :bind, '0.0.0.0'
-p settings.root
-p settings.public_folder
-p settings.static
 
 
 get '/' do

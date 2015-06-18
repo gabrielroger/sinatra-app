@@ -1,9 +1,16 @@
 require 'sinatra'
 require 'yaml/store'
+require 'sinatra/cookies'
 set :bind, '0.0.0.0'
 
+set(:cookie_options) do
+  { :expires => Time.now + 3600*24*30 }
+end
 
 get '/' do
+  if cookies[:a_vote]== 'oui'
+    redirect to '/results'
+  end
 	@title = 'Les animaux sont nos amis !'
 	erb :index
   end
@@ -17,6 +24,7 @@ Choices = {
 }
 post '/cast' do
   @title = "Merci d'avoir voté !"
+  cookies[:a_vote] = 'oui'
   @vote  = params['vote']
   @store = YAML::Store.new 'votes.yml'
   @store.transaction do

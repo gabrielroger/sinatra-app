@@ -9,3 +9,14 @@ body
 {
 	background-color: green;
 }
+#block_page
+{
+    background-image: url("fond2.png");
+    margin: auto;
+    width: 100%;
+    font-family: "Times New Roman";
+    color: red;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding-left: 15px;
+}

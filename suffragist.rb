@@ -4,23 +4,23 @@ require 'sinatra/cookies'
 set :bind, '0.0.0.0'
 
 set(:cookie_options) do
-  { :expires => Time.now + 3600*24*30 }
+  { :expires => Time.now + 3600*24*7 }
 end
 
 get '/' do
   if cookies[:a_vote]== 'oui'
     redirect to '/results'
   end
-	@title = 'Les animaux sont nos amis !'
+	@title = 'Quelle est votre couleur préférée ?'
 	erb :index
   end
 Choices = {
-  'PAN' => 'Panda',
-  'CAT' => 'Chat',
-  'DOG' => 'Chien',
-  'HOR' => 'Cheval',
-  'BUN' => 'Lapin',
-  'ORA' => 'Orange',
+  'BLU' => 'Bleu',
+  'VER' => 'Vert',
+  'RED' => 'Rouge',
+  'JAU' => 'Jaune',
+  'NOI' => 'Noir',
+  'BLA' => 'Blanc',
 }
 post '/cast' do
   @title = "Merci d'avoir voté !"

@@ -4,7 +4,7 @@ require 'sinatra/cookies'
 set :bind, '0.0.0.0'
 
 set(:cookie_options) do
-  { :expires => Time.now + 3600*24*7 }
+  { :expires => Time.now + 3600*24*31 }
 end
 
 get '/' do
